@@ -16,3 +16,20 @@ class Logger(object):
         pass    
 
 sys.stdout = Logger()
+
+
+# Other Option 
+
+import sys
+sys.stdout = open('file', 'w')
+print 'test'
+
+# C- Like Structure
+class Struct:
+    def __init__(self, **kwargs):
+        for k, v in kwargs.items():
+            setattr(self, k, v)
+            
+            
+class PYStruct(Struct):
+    pass
